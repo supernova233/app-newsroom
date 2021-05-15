@@ -10,11 +10,11 @@ const app = express();
 const port = 80;
 const distPath = "dist/app-newsroom/";
 
-// app.use(requireHTTPS);
+app.use(requireHTTPS);
 
 app.use(express.static('./dist/app-newsroom/'));
 
-app.get('/*', function(req, res) {
+app.get('/*', (req, res) => {
     res.sendFile('index.html', {root: distPath}
   );
 });
