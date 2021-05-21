@@ -1,0 +1,63 @@
+.text-header{
+    word-wrap: break-word;
+    font-family: "HaasGrotDispRWeb",sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -1px;
+    font-size: 4rem;
+    line-height: 1em;
+    word-spacing: 0.1em;
+    color: #555555;
+    margin-bottom: 32px;
+}
+
+.title-date{
+    font-family: inherit;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.1px;
+    font-size: 1.4rem;
+    line-height: inherit;
+    color: #555555;
+}
+.title-text{
+    a{
+        text-decoration: none;
+        border-bottom: 1px solid #e60023;
+        color: #555555;
+        font-size: 1.3rem;
+    }
+
+    a:hover{
+        color:#e60023;
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.news-text{
+    word-wrap: break-word;
+    font-size: 1.25rem;
+}
+
+.news-img{
+    width: 100%;
+
+    margin-bottom: 15px;
+    img{
+        width: 100%;
+    }
+
+}
+
+.btn-red{
+    background-color: #e60023;
+    color:#FFF;
+    font-weight: 700;
+
+}
+
+.btn-red:hover{
+    background-color: #dc324b;
+}
