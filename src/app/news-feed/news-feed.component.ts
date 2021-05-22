@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {BigNews} from '../big-news'
+import {BigNews} from '../big-news';
+import {NewsRoomService} from '../news-room.service'
 
 
 @Component({
@@ -13,7 +14,7 @@ export class NewsFeedComponent implements OnInit {
 
   topicDataModel = {}
 
-  constructor() { }
+  constructor( private newsS :NewsRoomService) { }
 
   ngOnInit(): void {
   }
