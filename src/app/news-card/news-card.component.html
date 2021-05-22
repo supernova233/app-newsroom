@@ -1,9 +1,9 @@
-<img class="col-12" src="{{imgUrl}}" alt="">
+<img class="col-12" src="{{news.imgUrl}}" alt="">
 <div class="caption">
-    <span class="image-tile__date">May 21, 2021</span>
+    <span class="image-tile__date">{{news.date}}</span>
     <h3 class="image-tile__title">
-        <a href="#" class="">
-            Christine Deputy joins Pinterest as Chief People Officer
+        <a [attr.href]="news.link" class="">
+            {{news.title}}
         </a>
     </h3>
 </div>

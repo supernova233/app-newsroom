@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input,Output ,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-pagi-btn',
@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagiBtnComponent implements OnInit {
 
+  @Input() length;
+  @Input() pageSize = 4;
+  @Input() pageStart = 1;
+
+  @Input() pageEnd ;
+
+  @Output() onPageChange = new EventEmitter<any>();
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  prevpage(){
+    this.onPageChange.emit(0 - this.pageSize)
+  }
+
+  nextpage(){
+    this.onPageChange.emit(0 + this.pageSize)
   }
 
 }

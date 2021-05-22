@@ -30,9 +30,9 @@
                                         class="fas fa-chevron-down"></i></span>
                             </div>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li *ngFor="let cateOpt of categoriesOption">
+                                    <a class="dropdown-item" href="#">{{cateOpt.name}}</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -47,9 +47,9 @@
                                     <i class="fas fa-chevron-down"></i></span>
                             </div>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li *ngFor="let year of yearOption">
+                                    <a class="dropdown-item" href="#">{{year}}</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -59,22 +59,21 @@
             </form>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-12 col-sm-6 col-md-3 mb-5 pb-5"> <app-news-card></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card [imgUrl]="img2"></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
-
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card [imgUrl]="img2"></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
+        <div class="row mt-5" >
+            <!-- News Card -->
+            <mat-progress-bar class="my-2" mode="indeterminate" color="accent" *ngIf="newsLoding"></mat-progress-bar>
+            <div class="row" *ngIf="!newsLoding">
+                <div  class="col-12 col-sm-6 col-md-3 mb-5 pb-5"  *ngFor="let obj of newsSlice">
+                    <app-news-card [news]="obj"></app-news-card>
+                </div>
+            </div>
+                
         </div>
 
         <div class="row">
             <div class="col-3 offset-9 my-5">
                 <!-- Pagination -->
-                <app-pagi-btn></app-pagi-btn>
+                <app-pagi-btn *ngIf="!newsLoding" [length]="newsData.length" [pageStart]="pageStart" [pageEnd]="pageEnd"  [pageSize]="pageSize" (onPageChange)="changePage($event)" ></app-pagi-btn>
 
             </div>
             

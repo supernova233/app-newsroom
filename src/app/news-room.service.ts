@@ -23,7 +23,7 @@ export class NewsRoomService {
   }
 
   getAllNews(){
-    return this.http.get<NewsModel>(this.apiUrl+'/getAllNews')
+    return this.http.get<NewsModel[]>(this.apiUrl+'/getAllNews')
   }
   
 }
