@@ -1,0 +1,41 @@
+.pagination__title{
+    color: #555555;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+$button-Size: 48px;
+.pagination__btn{
+
+    a{
+        color: #FFF;
+        background-color: #88a5aa;
+        text-decoration: none;
+        border-radius: 50%;
+        display:inline-flex;
+        align-items: center;
+        text-align: center;
+        width: $button-Size;
+        height: $button-Size; 
+        font-size: 1.3rem;
+        cursor: pointer;
+
+        i{
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+    a:hover{
+        background-color: rgba(136,165,170,0.8);
+    }
+}
+
+.disable{
+    
+    background-color: #ddd7d3 !important;
+    cursor: default !important;
+}
+.disable:hover{
+    background-color: #ddd7d3 !important;
+}

@@ -8,6 +8,8 @@ import { makeStateKey } from '@angular/platform-browser';
 })
 export class NewsFeedComponent implements OnInit {
 
+  img2 = "https://newsroom.pinterest.com/sites/pinnews/files/styles/thumb_square/public/post_thumbnail/2021-05/Thumbnail_primary-image_hero%20copy.png"
+
   // 1Km/h = 1000 / 60 = 16 m / Min
   speedKmph = (speed:number):number =>{ return speed * 1000};
   distanceKm = (dist:number):number =>{return dist * 1000};

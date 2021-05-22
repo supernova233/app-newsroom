@@ -4,7 +4,84 @@
         <app-big-news></app-big-news>
     </div>
     <app-break-bar></app-break-bar>
-    <p>news-feed works!</p>
-    
+
+    <div class="container">
+        <div class="row newsFeed-header mt-0">
+            <div class="col-md-6">
+                <h1>Latest News</h1>
+            </div>
+            <div class="col-md-3 offset-md-3">
+                <a href="#" class="seeAll-link">See all</a>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <form class="row">
+
+                <div class="col-3">
+                    <ul class="category-list">
+                        <li class="dropdown">
+                            <div class="input-group " id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <input type="text" class="form-control no-border-r " placeholder="Categories">
+                                <span class="input-group-text input-group-text-BG"><i
+                                        class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <ul class="category-list">
+                        <li class="dropdown">
+                            <div class="input-group" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                                <input type="text" class="form-control no-border-r" placeholder="Year">
+                                <span class="input-group-text input-group-text-BG">
+                                    <i class="fas fa-chevron-down"></i></span>
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card [imgUrl]="img2"></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-3 mb-5"> <app-news-card></app-news-card> </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3 offset-9 my-5">
+                <!-- Pagination -->
+                <app-pagi-btn></app-pagi-btn>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+
 </div>
 
+<app-get-in-touch-bar></app-get-in-touch-bar>
