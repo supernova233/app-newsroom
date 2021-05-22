@@ -1,7 +1,7 @@
 <app-news-header></app-news-header>
 <div class="container-fluid">
     <div class="container">
-        <app-big-news></app-big-news>
+        <app-big-news [newsConten]="topicDataModel" ></app-big-news>
     </div>
     <app-break-bar></app-break-bar>
 
@@ -59,14 +59,14 @@
         </div>
 
         <div class="row mt-5">
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-5 pb-5"> <app-news-card></app-news-card> </div>
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card [imgUrl]="img2"></app-news-card> </div>
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
 
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
-            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
+            <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card [imgUrl]="img2"></app-news-card> </div>
             <div class="col-12 col-sm-6 col-md-3 mb-5"> <app-news-card></app-news-card> </div>
         </div>
 

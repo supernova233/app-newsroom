@@ -1,23 +1,21 @@
 <div class="row py-5">
     <div class="col-md-6 col-12">
         <div class="text-header">
-            Pinterest introduces Idea Pins globally and launches new creator discovery features
+            {{newsConten.header}}
         </div>
         <div class="title-date">
-            May 18, 2021
+            {{newsConten.date}}
         </div>
         <div class="title-text">
-            <a href="#">Creater</a> ,
-            <a href="#">News</a> ,
-            <a href="#">Product</a> 
+            <a href="#" class="me-2" *ngFor="let tag of newsConten.tags">{{tag}},</a>
         </div>
     </div>
     <div class="col-md-6 col-12">
         <div class="news-img">
-            <img src="https://newsroom.pinterest.com/sites/pinnews/files/post_glimpse/2021-05/Idea_Pin-lavender-en-US.png" alt="">
+            <img src="{{newsConten.imgUrl}}" alt="">
         </div>
         <div class="news-text">
-            We’ve heard from our more than 475 million Pinners that they want to engage with video and explore content directly on Pinterest. Today, we’re introducing Idea Pins, our multi-page video format, to all creators in the US, UK, Australia, Canada, France, Germany, Austria and Switzerland. This new access and capability will empower anyone with a business account to create inspiring content and better interact with their audiences, building more engaged communities directly on Pinterest.
+            {{newsConten.text}}
         </div>
         <div class="mt-5">
             <button class="btn btn-red"> Read more</button>

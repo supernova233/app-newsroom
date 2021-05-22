@@ -24,15 +24,18 @@
 }
 .title-text{
     a{
-        text-decoration: none;
-        border-bottom: 1px solid #e60023;
+        text-decoration: underline;
+        text-decoration-color: #e60023;
+        text-decoration-thickness: 1px;
+        // border-bottom: 1px solid #e60023;
         color: #555555;
         font-size: 1.3rem;
     }
 
     a:hover{
         color:#e60023;
-        border-bottom: 1px solid transparent;
+        text-decoration: none;
+        // border-bottom: 1px solid transparent;
     }
 }
 

@@ -1,0 +1,28 @@
+.caption{
+    margin-top: 16px;
+}
+
+.image-tile__title{
+    color: #555;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+    margin: 0.5rem 0;
+    font-size: 1.3rem;
+
+    a{
+        color: #555;
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        text-decoration-color: #e60023;
+        text-decoration-thickness: 1px;
+    }
+}
+
+.image-tile__date{
+    font-size: 0.875rem;
+    color: #555;
+    margin-top: 16px;
+}
