@@ -1,7 +1,8 @@
 <app-news-header></app-news-header>
 <div class="container-fluid">
     <div class="container">
-        <app-big-news [newsConten]="topicDataModel" ></app-big-news>
+        <mat-progress-bar class="my-2" mode="indeterminate" color="accent" *ngIf="topicLoading"></mat-progress-bar>
+        <app-big-news [newsConten]="topicData"  *ngIf="!topicLoading"></app-big-news>
     </div>
     <app-break-bar></app-break-bar>
 

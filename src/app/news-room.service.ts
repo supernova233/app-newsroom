@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BigNews } from './big-news';
+
 
 
 @Injectable({
@@ -7,8 +9,12 @@ import { Injectable } from '@angular/core';
 })
 export class NewsRoomService {
 
+  apiUrl = "https://back-honey.herokuapp.com"
+
   constructor( private http:HttpClient) { }
 
-
+  getTopic(){
+    return this.http.get<BigNews>(this.apiUrl+"/getTopicNews").toPromise()
+  }
   
 }

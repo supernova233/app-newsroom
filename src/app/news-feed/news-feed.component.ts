@@ -12,11 +12,20 @@ export class NewsFeedComponent implements OnInit {
 
   img2 = "https://newsroom.pinterest.com/sites/pinnews/files/styles/thumb_square/public/post_thumbnail/2021-05/Thumbnail_primary-image_hero%20copy.png"
 
-  topicDataModel = {}
+  topicLoading:Boolean = true; 
+  topicData = {};
 
   constructor( private newsS :NewsRoomService) { }
 
   ngOnInit(): void {
+
+    this.newsS.getTopic().then( (res)=>{
+      this.topicData  = res
+      this.topicLoading = false;
+    })
+
+
+
   }
 
   
