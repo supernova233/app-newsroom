@@ -16,5 +16,9 @@ export class NewsRoomService {
   getTopic(){
     return this.http.get<BigNews>(this.apiUrl+"/getTopicNews").toPromise()
   }
+
+  sendData(formData){
+    return this.http.post(this.apiUrl+'/addNews',formData).toPromise()
+  }
   
 }

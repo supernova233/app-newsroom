@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
@@ -16,6 +17,7 @@ import { BreakBarComponent } from './break-bar/break-bar.component';
 import { NewsCardComponent } from './news-card/news-card.component';
 import { GetInTouchBarComponent } from './get-in-touch-bar/get-in-touch-bar.component';
 import { PagiBtnComponent } from './pagi-btn/pagi-btn.component';
+import { AddDataComponent } from './add-data/add-data.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,17 @@ import { PagiBtnComponent } from './pagi-btn/pagi-btn.component';
     BreakBarComponent,
     NewsCardComponent,
     GetInTouchBarComponent,
-    PagiBtnComponent
+    PagiBtnComponent,
+    AddDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

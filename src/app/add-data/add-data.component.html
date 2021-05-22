@@ -1,0 +1,43 @@
+<div class="container mt-5">
+    <div class="row pt-5">
+        <h2 class="text-secondary">Add News to mongo</h2>
+    </div>
+
+    <div class="row">
+        <form [formGroup]="keyForm" class="col-md-4">
+            <div class="row g-2">
+                <div class="col mb-3">
+                    <input id="key" class="form-control" type="text" placeholder="Key" [attr.disabled]="disabled ? '' : null" [attr.type]="disabled ? 'password' :'text' " required formControlName="accessKey" >
+                </div>
+                <div class="col mb-3">
+                    <button [ngClass]="{'btn-outline-success': disabled,'btn-warning':!disabled}" class="btn" (click)="disabled = !disabled" [innerHTML]="disabled ? 'Locked':'Unlock'">Unlock</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="row">
+        <form [formGroup]="newsForm" class=" col-md-5">
+            <div class="mb-3">
+                <label class="form-label">image URL : </label>
+                <input class="form-control" type="text" placeholder="URL" formControlName="imgUrl">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date : </label>
+                <input class="form-control" type="text" placeholder="Date" formControlName="date" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Title : </label>
+                <textarea class="form-control" rows="3" formControlName="title" ></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Link : </label>
+                <input class="form-control" type="text" placeholder="Link" formControlName="link">
+            </div>
+            <div class="">
+                <button class="btn btn-outline-success btn-lg" (click)="sendData()" [attr.disabled]="sending ? '' : null">Add</button>
+            </div>
+        </form>
+    </div>
+
+</div>
