@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BigNews } from './big-news';
+import { NewsModel } from './news-model';
 
 
 
@@ -19,6 +20,10 @@ export class NewsRoomService {
 
   sendData(formData){
     return this.http.post(this.apiUrl+'/addNews',formData).toPromise()
+  }
+
+  getAllNews(){
+    return this.http.get<NewsModel>(this.apiUrl+'/getAllNews')
   }
   
 }

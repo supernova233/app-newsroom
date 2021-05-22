@@ -4,38 +4,47 @@ import { NewsRoomService } from '../news-room.service';
 
 
 @Component({
-  selector: 'app-add-data',
-  templateUrl: './add-data.component.html',
-  styleUrls: ['./add-data.component.scss']
+	selector: 'app-add-data',
+	templateUrl: './add-data.component.html',
+	styleUrls: ['./add-data.component.scss']
 })
 export class AddDataComponent implements OnInit {
 
-  disabled: boolean = false;
-  sending: boolean = false;
+	disabled: boolean = false;
+	sending: boolean = false;
 
-  keyForm = this.fb.group({
-    accessKey: ['']
-  })
+	keyForm = this.fb.group({
+		accessKey: ['']
+	})
 
-  newsForm = this.fb.group({
-    imgUrl: [''],
-    date: [''],
-    title: [''],
-    link: ['']
-  })
+	newsForm = this.fb.group({
+		imgUrl: [''],
+		date: [''],
+		title: [''],
+		link: ['']
+	})
 
 
-  constructor(private fb: FormBuilder, private newsS: NewsRoomService) { }
+	constructor(private fb: FormBuilder, private newsS: NewsRoomService) { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
-  sendData() {
-    
-    this.sending = true;
-    this.newsS.sendData({ key: this.keyForm.value.accessKey, data: this.newsForm.value })
-    console.log("Sending . . .");
+	sendData() {
 
-  }
+		this.sending = true;
+		this.newsS.sendData({ key: this.keyForm.value.accessKey, data: this.newsForm.value }).then((res:any) => {
+			if (res.status == 200) {
+				this.sending = false;
+				this.newsForm.reset();
+				console.log(res.msg)
+			}else{
+				this.sending = false;
+				console.log(res)
+			}
+		})
+		console.log("Sending . . .");
+
+	}
 
 }
